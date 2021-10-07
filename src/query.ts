@@ -497,7 +497,7 @@ export const Query = makeQuery({
       );
     }
     const re = flags.includes("q")
-      ? new RegExp(escapeRegExp(pattern), "u" + flags.replaceAll("q", ""))
+      ? new RegExp(escapeRegExp(pattern), "u" + flags.replace(/q/g, ""))
       : options.regExp === "posix"
       ? translatePosixRegExp(pattern, posixFlagsFromLikeRegex(flags))
       : new RegExp(pattern, "u" + flags);
