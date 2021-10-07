@@ -1,6 +1,12 @@
 {
   "name": "Node.js",
+  "extensions": ["esbenp.prettier-vscode"],
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-16-bullseye",
   "postCreateCommand": "npm install",
-  "remoteUser": "node"
+  "remoteUser": "node",
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
 }
