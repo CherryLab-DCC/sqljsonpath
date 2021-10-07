@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/CherryLab-DCC/sqljsonpath/actions/workflows/node.js.yml/badge.svg)](https://github.com/CherryLab-DCC/sqljsonpath/actions/workflows/node.js.yml)
+
 # sqljsonpath
 
 JavaScript implementation of the SQL/JSON path language.
