@@ -1,0 +1,9436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse "\\b\\f\\r\\n\\t\\v\\"\\''\\\\" 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": "
+	\\"''\\\\",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse "\\x50\\u0067\\u{53}\\u{051}\\u{00004C}" 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": "PgSQL",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse "\\z" 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": "z",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse "123".type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": "123",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse "aaa".type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": "aaa",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse "last" 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": "last",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ + "2" 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "kind": "Root",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": "2",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ /* comment */ .bar 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "bar",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ < 1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "kind": "Root",
+    },
+    "op": "<",
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ <= 1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "kind": "Root",
+    },
+    "op": "<=",
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ <> 1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "kind": "Root",
+    },
+    "op": "!=",
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ == "2" 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "kind": "Root",
+    },
+    "op": "==",
+    "right": Object {
+      "kind": "Literal",
+      "value": "2",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ > 1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "kind": "Root",
+    },
+    "op": ">",
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? ($ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Root",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? ((@ == "1") is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "kind": "Current",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": "1",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? ((@ == 1) is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "kind": "Current",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (+@[*] > +2) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "kind": "Plus",
+      },
+      "op": ">",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 2,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (+@[*] > +3) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "kind": "Plus",
+      },
+      "op": ">",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 3,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ == @) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Current",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "i") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "i",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "iq") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "iq",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "is") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "is",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "isim") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "isim",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "q") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "q",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern" flag "smixq") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "smixq",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ like_regex "pattern") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "",
+      "kind": "LikeRegex",
+      "pattern": "pattern",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ starts with "abc") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "initial": Object {
+        "kind": "Literal",
+        "value": "abc",
+      },
+      "kind": "StartsWith",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@ starts with $var) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "initial": Object {
+        "kind": "Variable",
+        "name": "var",
+      },
+      "kind": "StartsWith",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < $value) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Variable",
+        "name": "value",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +0.1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 0.1,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +0.1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +0.1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 0.01,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +0.1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 10,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 0.1,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 10,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +10.1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 10.1,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +10.1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 101,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +10.1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1.01,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < +10.1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 101,
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -0.1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 0.1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -0.1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -0.1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 0.01,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -0.1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 10,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 0.1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 10,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -10.1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 10.1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -10.1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 101,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -10.1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1.01,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < -10.1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 101,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 0.1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0.1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 0.1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 0.1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0.01,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 0.1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 10,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0.1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 10,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 10.1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 10.1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 10.1e+1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 101,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 10.1e-1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1.01,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a < 10.1e1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 101,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a == @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a[*] >  @.b[*]) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "op": ">",
+      "right": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (@.a[*] >= @.b[*]) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (-@[*] < -2) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "kind": "Minus",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 2,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ ? (-@[*] < -3) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "kind": "Minus",
+      },
+      "op": "<",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 3,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Root",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $+1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "kind": "Root",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.* ? (@.a == @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": null,
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.* 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": null,
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == (@.b + 1)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Add",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == (1 + 1)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Add",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == @.b + 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Add",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == - @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == - 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == -@.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == -1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Minus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == 1 + 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Add",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == 1 - +@.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Sub",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "expr": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "kind": "Plus",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == 1 - @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Sub",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.** ? (@.a == 1 - - @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Sub",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "expr": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "kind": "Minus",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": -1,
+        "kind": "AnyPath",
+        "start": 0,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**{0 to last}.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": -1,
+        "kind": "AnyPath",
+        "start": 0,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**{0}.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 0,
+        "kind": "AnyPath",
+        "start": 0,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**{1 to 2}.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 2,
+        "kind": "AnyPath",
+        "start": 1,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**{1 to last}.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": -1,
+        "kind": "AnyPath",
+        "start": 1,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**{1}.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 1,
+        "kind": "AnyPath",
+        "start": 1,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.**{2 to 3}.b ? ( @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 3,
+        "kind": "AnyPath",
+        "start": 2,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.*.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": null,
+      "kind": "Key",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.*.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": null,
+      "kind": "Key",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.*[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": null,
+      "kind": "Key",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a + 2 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 2,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a ? (@ < $value) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Variable",
+        "name": "value",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.* 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "key": null,
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{0 to 5}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": 5,
+      "kind": "AnyPath",
+      "start": 0,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{2 to 2}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": 2,
+      "kind": "AnyPath",
+      "start": 2,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{2 to 5}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": 5,
+      "kind": "AnyPath",
+      "start": 2,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{2}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": 2,
+      "kind": "AnyPath",
+      "start": 2,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{5 to last}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": 5,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{last to 5}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": 5,
+      "kind": "AnyPath",
+      "start": -1,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.**{last}.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "end": -1,
+      "kind": "AnyPath",
+      "start": -1,
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a.v 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "key": "v",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a/+-1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Div",
+    "left": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "right": Object {
+      "expr": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Minus",
+      },
+      "kind": "Plus",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a[$.a.size() - 3] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Sub",
+        "left": Object {
+          "base": Object {
+            "base": Object {
+              "kind": "Root",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "kind": "Method",
+          "method": "size",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 3,
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a[$a + 1, ($b[*]) to -($[0] * 2)] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Add",
+        "left": Object {
+          "kind": "Variable",
+          "name": "a",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      Object {
+        "end": Object {
+          "expr": Object {
+            "kind": "Mul",
+            "left": Object {
+              "base": Object {
+                "kind": "Root",
+              },
+              "elements": Array [
+                Object {
+                  "kind": "Literal",
+                  "value": 0,
+                },
+              ],
+              "kind": "Index",
+            },
+            "right": Object {
+              "kind": "Literal",
+              "value": 2,
+            },
+          },
+          "kind": "Minus",
+        },
+        "kind": "To",
+        "start": Object {
+          "base": Object {
+            "kind": "Variable",
+            "name": "b",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a[*][*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.a[1,2, 3 to 16] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+      Object {
+        "kind": "Literal",
+        "value": 2,
+      },
+      Object {
+        "end": Object {
+          "kind": "Literal",
+          "value": 16,
+        },
+        "kind": "To",
+        "start": Object {
+          "kind": "Literal",
+          "value": 3,
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.abs() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "abs",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.b + 2 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 2,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.c ? ($.c.a == @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "c",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "key": "c",
+          "kind": "Key",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.c ? (@.a == @.b) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "c",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.ceiling() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "ceiling",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("HH24") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "HH24",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("HH24:MI TZH") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "HH24:MI TZH",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("HH24:MI TZH:TZM") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "HH24:MI TZH:TZM",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("HH24:MI") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "HH24:MI",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("HH24:MI:SS TZH:TZM").type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": "HH24:MI:SS TZH:TZM",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("HH24:MI:SS").type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": "HH24:MI:SS",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("aaa") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "aaa",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("datetime template") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "datetime template",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy HH24:MI TZH") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "dd-mm-yyyy HH24:MI TZH",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy HH24:MI TZH:TZM") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "dd-mm-yyyy HH24:MI TZH:TZM",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy HH24:MI TZH:TZM").type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": "dd-mm-yyyy HH24:MI TZH:TZM",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy HH24:MI") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "dd-mm-yyyy HH24:MI",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy HH24:MI").type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": "dd-mm-yyyy HH24:MI",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "dd-mm-yyyy",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy").type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": "dd-mm-yyyy",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime("dd-mm-yyyy\\"T\\"HH24:MI:SS") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": "dd-mm-yyyy\\"T\\"HH24:MI:SS",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime() > "2020-01-01 12:00:00".datetime() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "op": ">",
+    "right": Object {
+      "base": Object {
+        "kind": "Literal",
+        "value": "2020-01-01 12:00:00",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": null,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.datetime().type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.double() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "double",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.double().floor().ceiling().abs() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "kind": "Method",
+          "method": "double",
+        },
+        "kind": "Method",
+        "method": "floor",
+      },
+      "kind": "Method",
+      "method": "ceiling",
+    },
+    "kind": "Method",
+    "method": "abs",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.floor() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "floor",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.foo\\x50\\u0067\\u{53}\\u{051}\\u{00004C}\\t\\"bar 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "fooPgSQL	\\"bar",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? ($.a == 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? ((@.x >= 123 || @.a == 4) && exists (@.x ? (@ == 14))) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "And",
+      "left": Object {
+        "kind": "Or",
+        "left": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "x",
+            "kind": "Key",
+          },
+          "op": ">=",
+          "right": Object {
+            "kind": "Literal",
+            "value": 123,
+          },
+        },
+        "right": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 4,
+          },
+        },
+      },
+      "right": Object {
+        "expr": Object {
+          "base": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "x",
+            "kind": "Key",
+          },
+          "kind": "Filter",
+          "predicate": Object {
+            "kind": "Comparison",
+            "left": Object {
+              "kind": "Current",
+            },
+            "op": "==",
+            "right": Object {
+              "kind": "Literal",
+              "value": 14,
+            },
+          },
+        },
+        "kind": "Exists",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? ((@.x >= 123 || @.a == 4) is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "kind": "Or",
+        "left": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "x",
+            "kind": "Key",
+          },
+          "op": ">=",
+          "right": Object {
+            "kind": "Literal",
+            "value": 123,
+          },
+        },
+        "right": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 4,
+          },
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (+@.x >= +-(+@.a + 2)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "x",
+          "kind": "Key",
+        },
+        "kind": "Plus",
+      },
+      "op": ">=",
+      "right": Object {
+        "expr": Object {
+          "expr": Object {
+            "kind": "Add",
+            "left": Object {
+              "expr": Object {
+                "base": Object {
+                  "kind": "Current",
+                },
+                "key": "a",
+                "kind": "Key",
+              },
+              "kind": "Plus",
+            },
+            "right": Object {
+              "kind": "Literal",
+              "value": 2,
+            },
+          },
+          "kind": "Minus",
+        },
+        "kind": "Plus",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@ == 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.a == 1 && @.a == 4) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "And",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      "right": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 4,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.a == 1 || !(@.a == 4) && @.b == 7) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Or",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      "right": Object {
+        "kind": "And",
+        "left": Object {
+          "kind": "Not",
+          "predicate": Object {
+            "kind": "Comparison",
+            "left": Object {
+              "base": Object {
+                "kind": "Current",
+              },
+              "key": "a",
+              "kind": "Key",
+            },
+            "op": "==",
+            "right": Object {
+              "kind": "Literal",
+              "value": 4,
+            },
+          },
+        },
+        "right": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 7,
+          },
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.a == 1 || !(@.x >= 123 || @.a == 4) && @.b == 7) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Or",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      "right": Object {
+        "kind": "And",
+        "left": Object {
+          "kind": "Not",
+          "predicate": Object {
+            "kind": "Or",
+            "left": Object {
+              "kind": "Comparison",
+              "left": Object {
+                "base": Object {
+                  "kind": "Current",
+                },
+                "key": "x",
+                "kind": "Key",
+              },
+              "op": ">=",
+              "right": Object {
+                "kind": "Literal",
+                "value": 123,
+              },
+            },
+            "right": Object {
+              "kind": "Comparison",
+              "left": Object {
+                "base": Object {
+                  "kind": "Current",
+                },
+                "key": "a",
+                "kind": "Key",
+              },
+              "op": "==",
+              "right": Object {
+                "kind": "Literal",
+                "value": 4,
+              },
+            },
+          },
+        },
+        "right": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 7,
+          },
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.a == 1 || @.a == 4 && @.b == 7) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Or",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      "right": Object {
+        "kind": "And",
+        "left": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 4,
+          },
+        },
+        "right": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 7,
+          },
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.a == 1 || @.a == 4) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Or",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      "right": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "==",
+        "right": Object {
+          "kind": "Literal",
+          "value": 4,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.a == 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.x >= @[*]?(@.a > "abc")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "x",
+        "kind": "Key",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "op": ">",
+          "right": Object {
+            "kind": "Literal",
+            "value": "abc",
+          },
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (@.zip == $zip) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "zip",
+        "kind": "Key",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Variable",
+        "name": "zip",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (exists (@.x ? (@ == 14))) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "x",
+          "kind": "Key",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "kind": "Current",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": 14,
+          },
+        },
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (exists (@.x ? (@ >= 2) )) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "x",
+          "kind": "Key",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "kind": "Current",
+          },
+          "op": ">=",
+          "right": Object {
+            "kind": "Literal",
+            "value": 2,
+          },
+        },
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (exists (@.x)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "x",
+        "kind": "Key",
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.g ? (exists (@.y)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "y",
+        "kind": "Key",
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.keyvalue() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "keyvalue",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.keyvalue().key 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "Method",
+      "method": "keyvalue",
+    },
+    "key": "key",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.last 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "last",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $.type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[$[0] ? (last > 0)] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "elements": Array [
+            Object {
+              "kind": "Literal",
+              "value": 0,
+            },
+          ],
+          "kind": "Index",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "kind": "Last",
+          },
+          "op": ">",
+          "right": Object {
+            "kind": "Literal",
+            "value": 0,
+          },
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? ((2 / @ > 0) is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "kind": "Div",
+          "left": Object {
+            "kind": "Literal",
+            "value": 2,
+          },
+          "right": Object {
+            "kind": "Current",
+          },
+        },
+        "op": ">",
+        "right": Object {
+          "kind": "Literal",
+          "value": 0,
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@ != null) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "!=",
+      "right": Object {
+        "kind": "Literal",
+        "value": null,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@ < $value) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Variable",
+        "name": "value",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@ == "1") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": "1",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@ == $value) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Variable",
+        "name": "value",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@ == null) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": null,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@ starts with "abc") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "initial": Object {
+        "kind": "Literal",
+        "value": "abc",
+      },
+      "kind": "StartsWith",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@.a > $min && @.a < $max) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "And",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": ">",
+        "right": Object {
+          "kind": "Variable",
+          "name": "min",
+        },
+      },
+      "right": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "op": "<",
+        "right": Object {
+          "kind": "Variable",
+          "name": "max",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@.a > 2) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 2,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (@.a > 10) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 10,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] ? (2 / @ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Div",
+        "left": Object {
+          "kind": "Literal",
+          "value": 2,
+        },
+        "right": Object {
+          "kind": "Current",
+        },
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a > 1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "op": ">",
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a > 2 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "op": ">",
+    "right": Object {
+      "kind": "Literal",
+      "value": 2,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a ? (@ == 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a ? (@ > $min && @ < $max) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "And",
+      "left": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "kind": "Current",
+        },
+        "op": ">",
+        "right": Object {
+          "kind": "Variable",
+          "name": "min",
+        },
+      },
+      "right": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "kind": "Current",
+        },
+        "op": "<",
+        "right": Object {
+          "kind": "Variable",
+          "name": "max",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a ? (@ > 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a ? (@ > 10) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 10,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].abs() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "abs",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].ceiling() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "ceiling",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].ceiling().abs() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "Method",
+      "method": "ceiling",
+    },
+    "kind": "Method",
+    "method": "abs",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].ceiling().abs().type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "kind": "Method",
+        "method": "ceiling",
+      },
+      "kind": "Method",
+      "method": "abs",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ <  "10.03.2017".datetime("dd.mm.yyyy")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ <  "12:35 +1".datetime("HH24:MI TZH")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "12:35 +1",
+        },
+        "kind": "DateTime",
+        "template": "HH24:MI TZH",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ <  "12:35".datetime("HH24:MI")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "12:35",
+        },
+        "kind": "DateTime",
+        "template": "HH24:MI",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ < "10.03.2017 12:35 +1".datetime("dd.mm.yyyy HH24:MI TZH")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017 12:35 +1",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy HH24:MI TZH",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ < "10.03.2017 12:35".datetime("dd.mm.yyyy HH24:MI")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017 12:35",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy HH24:MI",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ == "10.03.2017 12:35 +1".datetime("dd.mm.yyyy HH24:MI TZH")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017 12:35 +1",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy HH24:MI TZH",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ == "10.03.2017 12:35".datetime("dd.mm.yyyy HH24:MI")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017 12:35",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy HH24:MI",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ == "10.03.2017".datetime("dd.mm.yyyy")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ == "12:35 +1".datetime("HH24:MI TZH")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "12:35 +1",
+        },
+        "kind": "DateTime",
+        "template": "HH24:MI TZH",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ == "12:35".datetime("HH24:MI")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "12:35",
+        },
+        "kind": "DateTime",
+        "template": "HH24:MI",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ >= "10.03.2017 12:35 +1".datetime("dd.mm.yyyy HH24:MI TZH")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017 12:35 +1",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy HH24:MI TZH",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ >= "10.03.2017 12:35".datetime("dd.mm.yyyy HH24:MI")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017 12:35",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy HH24:MI",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ >= "10.03.2017".datetime("dd.mm.yyyy")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "10.03.2017",
+        },
+        "kind": "DateTime",
+        "template": "dd.mm.yyyy",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ >= "12:35 +1".datetime("HH24:MI TZH")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "12:35 +1",
+        },
+        "kind": "DateTime",
+        "template": "HH24:MI TZH",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].datetime() ? (@ >= "12:35".datetime("HH24:MI")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "DateTime",
+      "template": null,
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": "12:35",
+        },
+        "kind": "DateTime",
+        "template": "HH24:MI",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].floor() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "floor",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].keyvalue() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "keyvalue",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*].type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*][0] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[*][0].a.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "elements": Array [
+          Object {
+            "kind": "Literal",
+            "value": 0,
+          },
+        ],
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0 to 1] ? (@.a > 1) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "end": Object {
+            "kind": "Literal",
+            "value": 1,
+          },
+          "kind": "To",
+          "start": Object {
+            "kind": "Literal",
+            "value": 0,
+          },
+        },
+      ],
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0 to 2] ? (@ < $value) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "end": Object {
+            "kind": "Literal",
+            "value": 2,
+          },
+          "kind": "To",
+          "start": Object {
+            "kind": "Literal",
+            "value": 0,
+          },
+        },
+      ],
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Variable",
+        "name": "value",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0,1] ? (@ < $x.value) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "kind": "Literal",
+          "value": 0,
+        },
+        Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      ],
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "<",
+      "right": Object {
+        "base": Object {
+          "kind": "Variable",
+          "name": "x",
+        },
+        "key": "value",
+        "kind": "Key",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0.3] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 0.3,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0.5] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 0.5,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0.9] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 0.9,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[0] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[1.2] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1.2,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[1] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[2.5 - 1 to $.size() - 2] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "end": Object {
+          "kind": "Sub",
+          "left": Object {
+            "base": Object {
+              "kind": "Root",
+            },
+            "kind": "Method",
+            "method": "size",
+          },
+          "right": Object {
+            "kind": "Literal",
+            "value": 2,
+          },
+        },
+        "kind": "To",
+        "start": Object {
+          "kind": "Sub",
+          "left": Object {
+            "kind": "Literal",
+            "value": 2.5,
+          },
+          "right": Object {
+            "kind": "Literal",
+            "value": 1,
+          },
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[last ? (@.type() == "number")] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "base": Object {
+          "kind": "Last",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "kind": "Method",
+            "method": "type",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": "number",
+          },
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[last ? (@.type() == "string")] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "base": Object {
+          "kind": "Last",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "kind": "Method",
+            "method": "type",
+          },
+          "op": "==",
+          "right": Object {
+            "kind": "Literal",
+            "value": "string",
+          },
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[last ? (exists(last))] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "base": Object {
+          "kind": "Last",
+        },
+        "kind": "Filter",
+        "predicate": Object {
+          "expr": Object {
+            "kind": "Last",
+          },
+          "kind": "Exists",
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[last - 1] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Sub",
+        "left": Object {
+          "kind": "Last",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $[last] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Last",
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $--+1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Sub",
+    "left": Object {
+      "kind": "Root",
+    },
+    "right": Object {
+      "expr": Object {
+        "expr": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "kind": "Plus",
+      },
+      "kind": "Minus",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $-1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Sub",
+    "left": Object {
+      "kind": "Root",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Variable",
+    "name": "a",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $a.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Variable",
+      "name": "a",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse $a[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Variable",
+      "name": "a",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($ < 1) || $.a.b <= $x 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Or",
+    "left": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Root",
+      },
+      "op": "<",
+      "right": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    },
+    "right": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+      "op": "<=",
+      "right": Object {
+        "kind": "Variable",
+        "name": "x",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Root",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($).a.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($.a - 5).abs() + 10 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "base": Object {
+        "kind": "Sub",
+        "left": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 5,
+        },
+      },
+      "kind": "Method",
+      "method": "abs",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 10,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($.a.b + -$.x.y).c.d 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Add",
+        "left": Object {
+          "base": Object {
+            "base": Object {
+              "kind": "Root",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "right": Object {
+          "expr": Object {
+            "base": Object {
+              "base": Object {
+                "kind": "Root",
+              },
+              "key": "x",
+              "kind": "Key",
+            },
+            "key": "y",
+            "kind": "Key",
+          },
+          "kind": "Minus",
+        },
+      },
+      "key": "c",
+      "kind": "Key",
+    },
+    "key": "d",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($.a.b).c.d 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+      "key": "c",
+      "kind": "Key",
+    },
+    "key": "d",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($[*] > 2) ? (@ == true) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 2,
+      },
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Literal",
+        "value": true,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($[*] > 3).type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 3,
+      },
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ($[*].a > 3).type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 3,
+      },
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse (($)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Root",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse ((($ + 1)).a + ((2)).b ? ((((@ > 1)) || (exists(@.c))))) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "base": Object {
+        "kind": "Add",
+        "left": Object {
+          "kind": "Root",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "right": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Literal",
+          "value": 2,
+        },
+        "key": "b",
+        "kind": "Key",
+      },
+      "kind": "Filter",
+      "predicate": Object {
+        "kind": "Or",
+        "left": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "kind": "Current",
+          },
+          "op": ">",
+          "right": Object {
+            "kind": "Literal",
+            "value": 1,
+          },
+        },
+        "right": Object {
+          "expr": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "c",
+            "kind": "Key",
+          },
+          "kind": "Exists",
+        },
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse (-+$.a.b).c.d 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "expr": Object {
+          "expr": Object {
+            "base": Object {
+              "base": Object {
+                "kind": "Root",
+              },
+              "key": "a",
+              "kind": "Key",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "kind": "Plus",
+        },
+        "kind": "Minus",
+      },
+      "key": "c",
+      "kind": "Key",
+    },
+    "key": "d",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse (1).type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse (1.2).e 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1.2,
+    },
+    "key": "e",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse (1.2).e3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1.2,
+    },
+    "key": "e3",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse (123).type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 123,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse +$ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "kind": "Root",
+    },
+    "kind": "Plus",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse /*comment*/ $.bar 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "bar",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse -$ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "kind": "Root",
+    },
+    "kind": "Minus",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse -$[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Minus",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse -($.a * $.a).floor() % 4.3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Mod",
+    "left": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Mul",
+          "left": Object {
+            "base": Object {
+              "kind": "Root",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+          "right": Object {
+            "base": Object {
+              "kind": "Root",
+            },
+            "key": "a",
+            "kind": "Key",
+          },
+        },
+        "kind": "Method",
+        "method": "floor",
+      },
+      "kind": "Minus",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 4.3,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse -(3 + 1 % $) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "kind": "Add",
+      "left": Object {
+        "kind": "Literal",
+        "value": 3,
+      },
+      "right": Object {
+        "kind": "Mod",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "kind": "Root",
+        },
+      },
+    },
+    "kind": "Minus",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.0 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.000 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.000e1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.000e2 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.000e3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.0010 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0.001,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.0010e+1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0.01,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.0010e+2 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0.1,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 0.0010e-1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 0.0001,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1 * 2 + 4 % -3 != false 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Comparison",
+    "left": Object {
+      "kind": "Add",
+      "left": Object {
+        "kind": "Mul",
+        "left": Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": 2,
+        },
+      },
+      "right": Object {
+        "kind": "Mod",
+        "left": Object {
+          "kind": "Literal",
+          "value": 4,
+        },
+        "right": Object {
+          "expr": Object {
+            "kind": "Literal",
+            "value": 3,
+          },
+          "kind": "Minus",
+        },
+      },
+    },
+    "op": "!=",
+    "right": Object {
+      "kind": "Literal",
+      "value": false,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1 + ($.a.b + 2).c.d 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "right": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Add",
+          "left": Object {
+            "base": Object {
+              "base": Object {
+                "kind": "Root",
+              },
+              "key": "a",
+              "kind": "Key",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "right": Object {
+            "kind": "Literal",
+            "value": 2,
+          },
+        },
+        "key": "c",
+        "kind": "Key",
+      },
+      "key": "d",
+      "kind": "Key",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1 + ($.a.b > 2).c.d 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "right": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Comparison",
+          "left": Object {
+            "base": Object {
+              "base": Object {
+                "kind": "Root",
+              },
+              "key": "a",
+              "kind": "Key",
+            },
+            "key": "b",
+            "kind": "Key",
+          },
+          "op": ">",
+          "right": Object {
+            "kind": "Literal",
+            "value": 2,
+          },
+        },
+        "key": "c",
+        "kind": "Key",
+      },
+      "key": "d",
+      "kind": "Key",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1 / $ + 2 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "kind": "Div",
+      "left": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+      "right": Object {
+        "kind": "Root",
+      },
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 2,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1 / $ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Div",
+    "left": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "right": Object {
+      "kind": "Root",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 1,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.2.e 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1.2,
+    },
+    "key": "e",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.2.e3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1.2,
+    },
+    "key": "e3",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.2.type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1.2,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.2e3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 1200,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.e 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "key": "e",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.e3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "key": "e3",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.e3.e 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+      "key": "e3",
+      "kind": "Key",
+    },
+    "key": "e",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.e3.e4 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+      "key": "e3",
+      "kind": "Key",
+    },
+    "key": "e4",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1.type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": 1,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 1e3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Literal",
+    "value": 1000,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse 3 * $ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Mul",
+    "left": Object {
+      "kind": "Literal",
+      "value": 3,
+    },
+    "right": Object {
+      "kind": "Root",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $ ? ((@[*] starts with "abc") is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "initial": Object {
+          "kind": "Literal",
+          "value": "abc",
+        },
+        "kind": "StartsWith",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $ ? (@[*] starts with "abc") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "initial": Object {
+        "kind": "Literal",
+        "value": "abc",
+      },
+      "kind": "StartsWith",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Root",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.** 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": -1,
+    "kind": "AnyPath",
+    "start": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": -1,
+        "kind": "AnyPath",
+        "start": 0,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{0 to last} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": -1,
+    "kind": "AnyPath",
+    "start": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{0 to last}.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": -1,
+        "kind": "AnyPath",
+        "start": 0,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{0} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": 0,
+    "kind": "AnyPath",
+    "start": 0,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{0}.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 0,
+        "kind": "AnyPath",
+        "start": 0,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{1 to 2}.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 2,
+        "kind": "AnyPath",
+        "start": 1,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{1 to last} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": -1,
+    "kind": "AnyPath",
+    "start": 1,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{1 to last}.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": -1,
+        "kind": "AnyPath",
+        "start": 1,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{1} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": 1,
+    "kind": "AnyPath",
+    "start": 1,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{1}.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 1,
+        "kind": "AnyPath",
+        "start": 1,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{2 to 3}.b ? (@ > 0) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "end": 3,
+        "kind": "AnyPath",
+        "start": 2,
+      },
+      "key": "b",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{2 to last} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": -1,
+    "kind": "AnyPath",
+    "start": 2,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{2} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": 2,
+    "kind": "AnyPath",
+    "start": 2,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{3 to last} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": -1,
+    "kind": "AnyPath",
+    "start": 3,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{3} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": 3,
+    "kind": "AnyPath",
+    "start": 3,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.**{last} 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "end": -1,
+    "kind": "AnyPath",
+    "start": -1,
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.*.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": null,
+      "kind": "Key",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.a * 3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Mul",
+    "left": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 3,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.a + 3 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Add",
+    "left": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "right": Object {
+      "kind": "Literal",
+      "value": 3,
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.g ? ((exists (@.x + "3")) is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "expr": Object {
+          "kind": "Add",
+          "left": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "key": "x",
+            "kind": "Key",
+          },
+          "right": Object {
+            "kind": "Literal",
+            "value": "3",
+          },
+        },
+        "kind": "Exists",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.g ? (exists (@.x + "3")) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Add",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "x",
+          "kind": "Key",
+        },
+        "right": Object {
+          "kind": "Literal",
+          "value": "3",
+        },
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.g ? (exists (@.x)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "x",
+        "kind": "Key",
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.keyvalue() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "keyvalue",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.keyvalue().key 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "Method",
+      "method": "keyvalue",
+    },
+    "key": "key",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $.type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? ((@ starts with "abc") is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "expr": Object {
+          "kind": "Current",
+        },
+        "initial": Object {
+          "kind": "Literal",
+          "value": "abc",
+        },
+        "kind": "StartsWith",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^a\\\\B$" flag "iq") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "iq",
+      "kind": "LikeRegex",
+      "pattern": "^a\\\\B$",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^a\\\\B$" flag "q") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "q",
+      "kind": "LikeRegex",
+      "pattern": "^a\\\\B$",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^a\\\\b$" flag "") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "",
+      "kind": "LikeRegex",
+      "pattern": "^a\\\\b$",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^a\\\\b$" flag "q") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "q",
+      "kind": "LikeRegex",
+      "pattern": "^a\\\\b$",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^ab.*c" flag "i") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "i",
+      "kind": "LikeRegex",
+      "pattern": "^ab.*c",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^ab.*c" flag "m") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "m",
+      "kind": "LikeRegex",
+      "pattern": "^ab.*c",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^ab.*c" flag "s") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "s",
+      "kind": "LikeRegex",
+      "pattern": "^ab.*c",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "^ab.*c") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "",
+      "kind": "LikeRegex",
+      "pattern": "^ab.*c",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "a\\\\b" flag "") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "",
+      "kind": "LikeRegex",
+      "pattern": "a\\\\b",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] ? (@ like_regex "a\\\\b" flag "q") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "kind": "Current",
+      },
+      "flags": "q",
+      "kind": "LikeRegex",
+      "pattern": "a\\\\b",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*].* 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "key": null,
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[*].size() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "size",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[0 to 10 / 0].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "end": Object {
+            "kind": "Div",
+            "left": Object {
+              "kind": "Literal",
+              "value": 10,
+            },
+            "right": Object {
+              "kind": "Literal",
+              "value": 0,
+            },
+          },
+          "kind": "To",
+          "start": Object {
+            "kind": "Literal",
+            "value": 0,
+          },
+        },
+      ],
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[0 to 10].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "end": Object {
+            "kind": "Literal",
+            "value": 10,
+          },
+          "kind": "To",
+          "start": Object {
+            "kind": "Literal",
+            "value": 0,
+          },
+        },
+      ],
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[0,1].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "kind": "Literal",
+          "value": 0,
+        },
+        Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      ],
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[0] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 0,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[0].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "kind": "Literal",
+          "value": 0,
+        },
+      ],
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[1].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "kind": "Literal",
+          "value": 1,
+        },
+      ],
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[2].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": Array [
+        Object {
+          "kind": "Literal",
+          "value": 2,
+        },
+      ],
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax $[10000000000000000] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 10000000000000000,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax -$.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Minus",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse lax exists($[*].a) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Exists",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse null.type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": null,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;
+
+exports[`parse strict $ ? ((@[*] starts with "abc") is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "initial": Object {
+          "kind": "Literal",
+          "value": "abc",
+        },
+        "kind": "StartsWith",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $ ? (@ == @) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "kind": "Current",
+      },
+      "op": "==",
+      "right": Object {
+        "kind": "Current",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $ ? (@.a[*] >= @.b[*]) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "a",
+          "kind": "Key",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "op": ">=",
+      "right": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "b",
+          "kind": "Key",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $ ? (@[*] starts with "abc") 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "initial": Object {
+        "kind": "Literal",
+        "value": "abc",
+      },
+      "kind": "StartsWith",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $ 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "kind": "Root",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.* 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": null,
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.*.b 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": null,
+      "kind": "Key",
+    },
+    "key": "b",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.datetime() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "DateTime",
+    "template": null,
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.double() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "double",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.g ? ((exists (@[*].x)) is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "expr": Object {
+          "base": Object {
+            "base": Object {
+              "kind": "Current",
+            },
+            "elements": null,
+            "kind": "Index",
+          },
+          "key": "x",
+          "kind": "Key",
+        },
+        "kind": "Exists",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.g ? (exists (@[*].x)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "key": "g",
+      "kind": "Key",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "key": "x",
+        "kind": "Key",
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.g[*] ? ((exists (@.x)) is unknown) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "g",
+        "kind": "Key",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "kind": "IsUnknown",
+      "predicate": Object {
+        "expr": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "key": "x",
+          "kind": "Key",
+        },
+        "kind": "Exists",
+      },
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.g[*] ? (exists (@.x)) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "key": "g",
+        "kind": "Key",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Filter",
+    "predicate": Object {
+      "expr": Object {
+        "base": Object {
+          "kind": "Current",
+        },
+        "key": "x",
+        "kind": "Key",
+      },
+      "kind": "Exists",
+    },
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.keyvalue() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "kind": "Method",
+    "method": "keyvalue",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $.keyvalue().a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "kind": "Method",
+      "method": "keyvalue",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $["a"] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": "a",
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[*] ? (@[0] < $x) [1] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "Filter",
+      "predicate": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": Array [
+            Object {
+              "kind": "Literal",
+              "value": 0,
+            },
+          ],
+          "kind": "Index",
+        },
+        "op": "<",
+        "right": Object {
+          "kind": "Variable",
+          "name": "x",
+        },
+      },
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[*] ? (@[0] > $x) [1] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "kind": "Filter",
+      "predicate": Object {
+        "kind": "Comparison",
+        "left": Object {
+          "base": Object {
+            "kind": "Current",
+          },
+          "elements": Array [
+            Object {
+              "kind": "Literal",
+              "value": 0,
+            },
+          ],
+          "kind": "Index",
+        },
+        "op": ">",
+        "right": Object {
+          "kind": "Variable",
+          "name": "x",
+        },
+      },
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": null,
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[*].a 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "key": "a",
+    "kind": "Key",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[*].size() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Method",
+    "method": "size",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[1.2] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1.2,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[1] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 1,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[10000000000000000] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Literal",
+        "value": 10000000000000000,
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict $[last] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Root",
+    },
+    "elements": Array [
+      Object {
+        "kind": "Last",
+      },
+    ],
+    "kind": "Index",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict ($[*].a > 3).type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Comparison",
+      "left": Object {
+        "base": Object {
+          "base": Object {
+            "kind": "Root",
+          },
+          "elements": null,
+          "kind": "Index",
+        },
+        "key": "a",
+        "kind": "Key",
+      },
+      "op": ">",
+      "right": Object {
+        "kind": "Literal",
+        "value": 3,
+      },
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict -$[*] 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "base": Object {
+        "kind": "Root",
+      },
+      "elements": null,
+      "kind": "Index",
+    },
+    "kind": "Minus",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse strict exists($[*].a) 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "expr": Object {
+      "base": Object {
+        "base": Object {
+          "kind": "Root",
+        },
+        "elements": null,
+        "kind": "Index",
+      },
+      "key": "a",
+      "kind": "Key",
+    },
+    "kind": "Exists",
+  },
+  "kind": "JsonPath",
+  "strict": true,
+}
+`;
+
+exports[`parse true.type() 1`] = `
+Object {
+  "expr_or_predicate": Object {
+    "base": Object {
+      "kind": "Literal",
+      "value": true,
+    },
+    "kind": "Method",
+    "method": "type",
+  },
+  "kind": "JsonPath",
+  "strict": false,
+}
+`;

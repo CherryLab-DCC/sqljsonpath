@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Tests",
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_OPTIONS": "--experimental-vm-modules"
+      },
+      "internalConsoleOptions": "neverOpen",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "port": 9229,
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand"
+      ],
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    }
+  ]
+}

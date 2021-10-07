@@ -1,0 +1,1325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HH24:MI:SS 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`HH24:MI:SS 2`] = `"^\\\\s*(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})\\\\s*$"`;
+
+exports[`HH24:MI:SS 3`] = `
+Array [
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+]
+`;
+
+exports[`HH24:MI:SS 4`] = `
+Object {
+  "hour": 14,
+  "minute": 15,
+  "second": 16,
+}
+`;
+
+exports[`HH24:MI:SSTZH 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "TZH",
+    "toString": [Function],
+    "type": "TZH",
+    "value": "[+\\\\- ]?\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`HH24:MI:SSTZH 2`] = `"^\\\\s*(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})([+\\\\- ]?\\\\d{1,2})\\\\s*$"`;
+
+exports[`HH24:MI:SSTZH 3`] = `
+Array [
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+  "(s) => ({ tzh: Number(s) })",
+]
+`;
+
+exports[`HH24:MI:SSTZH 4`] = `
+Object {
+  "hour": 14,
+  "minute": 15,
+  "second": 16,
+  "tzh": 8,
+}
+`;
+
+exports[`HH24:MI:SSTZH:TZM 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "TZH",
+    "toString": [Function],
+    "type": "TZH",
+    "value": "[+\\\\- ]?\\\\d{1,2}",
+  },
+  Object {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 15,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 14,
+    "text": "TZM",
+    "toString": [Function],
+    "type": "TZM",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`HH24:MI:SSTZH:TZM 2`] = `"^\\\\s*(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})([+\\\\- ]?\\\\d{1,2}):(\\\\d{1,2})\\\\s*$"`;
+
+exports[`HH24:MI:SSTZH:TZM 3`] = `
+Array [
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+  "(s) => ({ tzh: Number(s) })",
+  "(s) => ({ tzm: Number(s) })",
+]
+`;
+
+exports[`HH24:MI:SSTZH:TZM 4`] = `
+Object {
+  "hour": 14,
+  "minute": 15,
+  "second": 16,
+  "tzh": 8,
+  "tzm": 0,
+}
+`;
+
+exports[`yyyy-mm-dd 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd 4`] = `
+Object {
+  "day": 13,
+  "month": 12,
+  "year": 2011,
+}
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SS 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": " ",
+    "toString": [Function],
+    "type": "skip",
+    "value": "\\\\s+",
+  },
+  Object {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SS 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})\\\\s+(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd HH24:MI:SS 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SS 4`] = `
+Object {
+  "day": 13,
+  "hour": 14,
+  "minute": 15,
+  "month": 12,
+  "second": 16,
+  "year": 2011,
+}
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": " ",
+    "toString": [Function],
+    "type": "skip",
+    "value": "\\\\s+",
+  },
+  Object {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "TZH",
+    "toString": [Function],
+    "type": "TZH",
+    "value": "[+\\\\- ]?\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})\\\\s+(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})([+\\\\- ]?\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+  "(s) => ({ tzh: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH 4`] = `
+Object {
+  "day": 13,
+  "hour": 14,
+  "minute": 15,
+  "month": 12,
+  "second": 16,
+  "tzh": 8,
+  "year": 2011,
+}
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH:TZM 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": " ",
+    "toString": [Function],
+    "type": "skip",
+    "value": "\\\\s+",
+  },
+  Object {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 16,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 15,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 17,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 16,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 20,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 19,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "TZH",
+    "toString": [Function],
+    "type": "TZH",
+    "value": "[+\\\\- ]?\\\\d{1,2}",
+  },
+  Object {
+    "col": 25,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 24,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 26,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 25,
+    "text": "TZM",
+    "toString": [Function],
+    "type": "TZM",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH:TZM 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})\\\\s+(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})([+\\\\- ]?\\\\d{1,2}):(\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH:TZM 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+  "(s) => ({ tzh: Number(s) })",
+  "(s) => ({ tzm: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd HH24:MI:SSTZH:TZM 4`] = `
+Object {
+  "day": 13,
+  "hour": 14,
+  "minute": 15,
+  "month": 12,
+  "second": 16,
+  "tzh": 8,
+  "tzm": 0,
+  "year": 2011,
+}
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SS 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "\\"",
+    "toString": [Function],
+    "type": "skip",
+    "value": "",
+  },
+  Object {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "T",
+    "toString": [Function],
+    "type": "skip",
+    "value": "T",
+  },
+  Object {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "\\"",
+    "toString": [Function],
+    "type": "skip",
+    "value": "",
+  },
+  Object {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SS 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})T(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SS 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SS 4`] = `
+Object {
+  "day": 13,
+  "hour": 14,
+  "minute": 15,
+  "month": 12,
+  "second": 16,
+  "year": 2011,
+}
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "\\"",
+    "toString": [Function],
+    "type": "skip",
+    "value": "",
+  },
+  Object {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "T",
+    "toString": [Function],
+    "type": "skip",
+    "value": "T",
+  },
+  Object {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "\\"",
+    "toString": [Function],
+    "type": "skip",
+    "value": "",
+  },
+  Object {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 24,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 23,
+    "text": "TZH",
+    "toString": [Function],
+    "type": "TZH",
+    "value": "[+\\\\- ]?\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})T(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})([+\\\\- ]?\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+  "(s) => ({ tzh: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH 4`] = `
+Object {
+  "day": 13,
+  "hour": 14,
+  "minute": 15,
+  "month": 12,
+  "second": 16,
+  "tzh": 8,
+  "year": 2011,
+}
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH:TZM 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "yyyy",
+    "toString": [Function],
+    "type": "YYYY",
+    "value": "[+\\\\-]?\\\\d{4}",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "mm",
+    "toString": [Function],
+    "type": "MM",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 8,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 7,
+    "text": "-",
+    "toString": [Function],
+    "type": "skip",
+    "value": "-",
+  },
+  Object {
+    "col": 9,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 8,
+    "text": "dd",
+    "toString": [Function],
+    "type": "DD",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 11,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 10,
+    "text": "\\"",
+    "toString": [Function],
+    "type": "skip",
+    "value": "",
+  },
+  Object {
+    "col": 12,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 11,
+    "text": "T",
+    "toString": [Function],
+    "type": "skip",
+    "value": "T",
+  },
+  Object {
+    "col": 13,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 12,
+    "text": "\\"",
+    "toString": [Function],
+    "type": "skip",
+    "value": "",
+  },
+  Object {
+    "col": 14,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 13,
+    "text": "HH24",
+    "toString": [Function],
+    "type": "HH24",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 18,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 17,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 19,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 18,
+    "text": "MI",
+    "toString": [Function],
+    "type": "MI",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 21,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 20,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 22,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 21,
+    "text": "SS",
+    "toString": [Function],
+    "type": "SS",
+    "value": "\\\\d{1,2}",
+  },
+  Object {
+    "col": 24,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 23,
+    "text": "TZH",
+    "toString": [Function],
+    "type": "TZH",
+    "value": "[+\\\\- ]?\\\\d{1,2}",
+  },
+  Object {
+    "col": 27,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 26,
+    "text": ":",
+    "toString": [Function],
+    "type": "skip",
+    "value": ":",
+  },
+  Object {
+    "col": 28,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 27,
+    "text": "TZM",
+    "toString": [Function],
+    "type": "TZM",
+    "value": "\\\\d{1,2}",
+  },
+]
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH:TZM 2`] = `"^\\\\s*([+\\\\-]?\\\\d{4})-(\\\\d{1,2})-(\\\\d{1,2})T(\\\\d{1,2}):(\\\\d{1,2}):(\\\\d{1,2})([+\\\\- ]?\\\\d{1,2}):(\\\\d{1,2})\\\\s*$"`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH:TZM 3`] = `
+Array [
+  "(s) => ({ year: Number(s.replace(\\",\\", \\"\\")) })",
+  "(s) => ({ month: Number(s) })",
+  "(s) => ({ day: Number(s) })",
+  "(s) => ({ hour: Number(s) })",
+  "(s) => ({ minute: Number(s) })",
+  "(s) => ({ second: Number(s) })",
+  "(s) => ({ tzh: Number(s) })",
+  "(s) => ({ tzm: Number(s) })",
+]
+`;
+
+exports[`yyyy-mm-dd"T"HH24:MI:SSTZH:TZM 4`] = `
+Object {
+  "day": 13,
+  "hour": 14,
+  "minute": 15,
+  "month": 12,
+  "second": 16,
+  "tzh": 8,
+  "tzm": 0,
+  "year": 2011,
+}
+`;

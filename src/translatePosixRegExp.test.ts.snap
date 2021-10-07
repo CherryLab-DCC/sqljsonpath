@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`^a\\B$ 1`] = `/\\^a\\\\\\\\\\$/su`;
+
+exports[`^a\\b$ 1`] = `/\\^a\\\\x08\\$/su`;
+
+exports[`^ab.*c 1`] = `/\\^ab\\.\\*c/su`;
+
+exports[`a\\b 1`] = `/a\\\\x08/su`;
+
+exports[`lexer ^a\\B$ 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "^",
+    "toString": [Function],
+    "type": "Constraint",
+    "value": "^",
+  },
+  Object {
+    "col": 2,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 1,
+    "text": "a",
+    "toString": [Function],
+    "type": "other",
+    "value": "a",
+  },
+  Object {
+    "col": 3,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 2,
+    "text": "\\\\B",
+    "toString": [Function],
+    "type": "BackRefOrCharacterEntryEscape",
+    "value": "\\\\\\\\",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "$",
+    "toString": [Function],
+    "type": "Constraint",
+    "value": "$",
+  },
+]
+`;
+
+exports[`lexer ^a\\b$ 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "^",
+    "toString": [Function],
+    "type": "Constraint",
+    "value": "^",
+  },
+  Object {
+    "col": 2,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 1,
+    "text": "a",
+    "toString": [Function],
+    "type": "other",
+    "value": "a",
+  },
+  Object {
+    "col": 3,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 2,
+    "text": "\\\\b",
+    "toString": [Function],
+    "type": "BackRefOrCharacterEntryEscape",
+    "value": "\\\\x08",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "$",
+    "toString": [Function],
+    "type": "Constraint",
+    "value": "$",
+  },
+]
+`;
+
+exports[`lexer ^ab.*c 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "^",
+    "toString": [Function],
+    "type": "Constraint",
+    "value": "^",
+  },
+  Object {
+    "col": 2,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 1,
+    "text": "ab",
+    "toString": [Function],
+    "type": "other",
+    "value": "ab",
+  },
+  Object {
+    "col": 4,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 3,
+    "text": ".",
+    "toString": [Function],
+    "type": "dot",
+    "value": ".",
+  },
+  Object {
+    "col": 5,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 4,
+    "text": "*",
+    "toString": [Function],
+    "type": "Quantifier",
+    "value": "*",
+  },
+  Object {
+    "col": 6,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 5,
+    "text": "c",
+    "toString": [Function],
+    "type": "other",
+    "value": "c",
+  },
+]
+`;
+
+exports[`lexer a\\b 1`] = `
+Array [
+  Object {
+    "col": 1,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 0,
+    "text": "a",
+    "toString": [Function],
+    "type": "other",
+    "value": "a",
+  },
+  Object {
+    "col": 2,
+    "line": 1,
+    "lineBreaks": 0,
+    "offset": 1,
+    "text": "\\\\b",
+    "toString": [Function],
+    "type": "BackRefOrCharacterEntryEscape",
+    "value": "\\\\x08",
+  },
+]
+`;

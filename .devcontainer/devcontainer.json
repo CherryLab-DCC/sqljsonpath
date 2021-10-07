@@ -1,0 +1,6 @@
+{
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-16-bullseye",
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}
